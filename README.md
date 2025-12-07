@@ -1,7 +1,7 @@
 # OthelloCoursework
 Othello coursework code,readme and .doc
 
-<H1> AI Algorithm <H1>
+<H1> AI Algorithm </H1>
 
 
 The algorithm for the ai to determin is made up of primarily 2 functions. The first of which is called ai move 
