@@ -5,23 +5,54 @@ which can be done through 'pip install flask'.
 
 which zip to download 
 
-if you wish to play 2 -player in the command line 
+If you wish to play 2 -player in the command line 
   - Download stage 1.zip and extract 
   - There should be 2 files componants.py and game_engine.py 
   - run the game by opening the command prompt in the directory where the 2 python files are and running python game_engine.py
   - play the game using the command prompt window
 
-if you wish to play 2 player with a gui 
+If you wish to play 2 player with a gui 
   - Download stage2.zip and extract 
   - There should be 3 files: componants.py,flask_game_engine.py and game_engine.py aswell as a folder called templates which contains index.html
   - to play run flask_game_engine.py using python flask_game_engine.py or by using an ide such as vscode
   - to interact with the gui open a web browser and go to the address http://127.0.0.1:5000 which is where its hosted
   - To exit the game either close the tab or enter CTRL+C in the terminal
 
-if you wish to play against an ai opponant
+If you wish to play against an ai opponant
 
   - Download stage3.zip and extract
   - There should be 3 files: componants.py,flask_game_engine.py and game_engine.py aswell as a folder called templates which contains index.html
   - to play run flask_game_engine.py using python flask_game_engine.py or by using an ide such as vscode
   - to interact with the gui open a web browser and go to the address http://127.0.0.1:5000 which is where its hosted
   - To exit the game either close the tab or enter CTRL+C in the terminal
+
+
+How the API works 
+
+There are several endpoints for the GUI to interact with the flask
+
+/
+
+/ is the default endpoint and is used to render the template. It is passed the game board as an argument
+/move
+
+/move is the endpoint to complete a user move. The endpoint expects a request with 2 arguments x and y which are the users coordinate inputs. There are 3 types of responses, success,failure and finished. For success and failure 
+the response has a status which is either 'success'. If success the board will be sent within "board" aswell as the colour of the playerr whos turn it is under "player". If it is returning a fail an error message is provided under "message"
+
+If it is a response to say that the game has finished, then it will have 2 arguments. The first is "finished" and the value of "finished" will be a message which has the reason for the game ending, the number of each colour counter and who won/draw
+
+/save
+
+/save is the endpoint to save the current state of the game to the user. The endpoint expects the request to be in plaintext and the body of the request to be the name the user wants to save the file as. The endpoint will return a response
+with the format of "status" which will be success or fail depending on the outcome and a "message" which will either be conformation of the saves completion or an error message of what went wrong.
+
+/load 
+
+/load is the endpoint to load a previously saved game. Like /save tthe /load endpoint expects the request to be in plaintext and the body of the request to be the name of the file the user wants to load. The endpoint will return a response 
+with the arguments "status" which will be success or fail depending on if the file was succesfully loaded or not, aswell as a "message" which will be confirmation of a succesful game load or an error message of what went wrong
+
+Testing
+
+To start a new game has been created 
+
+
