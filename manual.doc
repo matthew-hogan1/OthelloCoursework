@@ -1,1 +1,27 @@
+Requirements to run
 
+In order to run these files, you will need python installed aswell as installing the logging extension by running 'pip install logging'. If you wish to use the version with the html gui you will also need to install flask,
+which can be done through 'pip install flask'. 
+
+which zip to download 
+
+if you wish to play 2 -player in the command line 
+  - Download stage 1.zip and extract 
+  - There should be 2 files componants.py and game_engine.py 
+  - run the game by opening the command prompt in the directory where the 2 python files are and running python game_engine.py
+  - play the game using the command prompt window
+
+if you wish to play 2 player with a gui 
+  - Download stage2.zip and extract 
+  - There should be 3 files: componants.py,flask_game_engine.py and game_engine.py aswell as a folder called templates which contains index.html
+  - to play run flask_game_engine.py using python flask_game_engine.py or by using an ide such as vscode
+  - to interact with the gui open a web browser and go to the address http://127.0.0.1:5000 which is where its hosted
+  - To exit the game either close the tab or enter CTRL+C in the terminal
+
+if you wish to play against an ai opponant
+
+  - Download stage3.zip and extract
+  - There should be 3 files: componants.py,flask_game_engine.py and game_engine.py aswell as a folder called templates which contains index.html
+  - to play run flask_game_engine.py using python flask_game_engine.py or by using an ide such as vscode
+  - to interact with the gui open a web browser and go to the address http://127.0.0.1:5000 which is where its hosted
+  - To exit the game either close the tab or enter CTRL+C in the terminal
