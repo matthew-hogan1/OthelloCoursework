@@ -4,7 +4,7 @@ Othello coursework code,readme and .doc
 <H1> AI Algorithm </H1>
 
 
-The algorithm for the ai to determine is made up of primarily 2 functions. The first of which is called ai_move() and the second called simulate_placement()
+The algorithm for the ai to determine what move to make is made up of primarily 2 functions. The first of which is called ai_move() and the second called simulate_placement(). The move is then executed in the move() function after the player makes their move.
 
 <H2>ai_move()</H2>
 
